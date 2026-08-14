@@ -1,0 +1,123 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# 媒体文件（产品图、轮播图）上传目录
+media_folder: "public/assets/uploads"
+public_folder: "/assets/uploads"
+
+# 登录后默认进入的站点
+site_url: "https://thriving-crumble-772f51.netlify.app"
+display_url: "https://thriving-crumble-772f51.netlify.app"
+
+collections:
+  - name: "site"
+    label: "网站内容"
+    file: "site/app/data/site-data.json"
+    fields:
+      - name: "company"
+        label: "公司信息"
+        widget: "object"
+        fields:
+          - { name: name, label: "公司全称", widget: string }
+          - { name: shortName, label: "公司简称", widget: string }
+          - { name: enName, label: "英文名", widget: string }
+          - { name: slogan, label: "品牌口号", widget: string }
+          - { name: subSlogan, label: "副口号", widget: text }
+          - { name: description, label: "公司简介", widget: text }
+          - { name: established, label: "成立年份", widget: string }
+          - { name: headquarters, label: "总部", widget: string }
+          - { name: scope, label: "经营范围", widget: string }
+          - { name: vision, label: "企业愿景", widget: text }
+          - { name: mission, label: "企业使命", widget: text }
+          - name: values
+            label: "价值观"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "标题", widget: string }
+              - { name: content, label: "内容", widget: text }
+      - name: "contact"
+        label: "联系方式"
+        widget: "object"
+        fields:
+          - { name: phone, label: "电话", widget: string }
+          - { name: fax, label: "传真", widget: string }
+          - { name: email, label: "邮箱", widget: string }
+          - { name: address, label: "地址", widget: string }
+          - { name: icp, label: "备案号", widget: string }
+      - name: "nav"
+        label: "导航菜单"
+        widget: list
+        summary: "{{fields.label}}"
+        fields:
+          - { name: label, label: "菜单名称", widget: string }
+          - { name: href, label: "锚点链接", widget: string, hint: "例如 #products" }
+      - name: "heroSlides"
+        label: "首页轮播"
+        widget: list
+        summary: "{{fields.title}}"
+        fields:
+          - { name: tag, label: "标签", widget: string }
+          - { name: title, label: "标题", widget: string }
+          - { name: desc, label: "描述", widget: text }
+          - { name: image, label: "轮播图片", widget: image }
+          - { name: link, label: "链接", widget: string, hint: "例如 #products" }
+      - name: "stats"
+        label: "数据指标"
+        widget: list
+        summary: "{{fields.label}}"
+        fields:
+          - { name: label, label: "名称", widget: string }
+          - { name: value, label: "数值", widget: number }
+          - { name: suffix, label: "后缀", widget: string, hint: "例如 +" }
+      - name: "industries"
+        label: "行业领域"
+        widget: list
+        summary: "{{fields.name}}"
+        fields:
+          - { name: id, label: "ID", widget: string, hint: "ivd/pharma/daily/food/general" }
+          - { name: name, label: "名称", widget: string }
+          - { name: description, label: "描述", widget: text }
+      - name: "products"
+        label: "产品中心"
+        widget: list
+        summary: "{{fields.name}}"
+        fields:
+          - { name: id, label: "ID", widget: string }
+          - { name: name, label: "产品名称", widget: string }
+          - { name: model, label: "型号", widget: string }
+          - { name: category, label: "分类", widget: string, hint: "ivd / pharma / daily / food / general" }
+          - { name: subCategory, label: "子分类", widget: string }
+          - { name: image, label: "产品图片", widget: image }
+          - { name: shortDesc, label: "简短描述", widget: text }
+          - { name: fullDesc, label: "详细介绍", widget: text }
+          - name: features
+            label: "产品特点"
+            widget: list
+            summary: "{{fields.item}}"
+            field: { name: item, label: "特点", widget: string }
+          - name: specs
+            label: "技术参数"
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { name: label, label: "参数名", widget: string }
+              - { name: value, label: "参数值", widget: string }
+      - name: "news"
+        label: "新闻中心"
+        widget: list
+        summary: "{{fields.title}}"
+        fields:
+          - { name: id, label: "ID", widget: string }
+          - { name: title, label: "标题", widget: string }
+          - { name: date, label: "日期", widget: datetime, date_format: YYYY-MM-DD, time_format: false }
+          - { name: category, label: "分类", widget: string }
+          - { name: summary, label: "摘要", widget: text }
+      - name: "advantages"
+        label: "核心优势"
+        widget: list
+        summary: "{{fields.title}}"
+        fields:
+          - { name: title, label: "标题", widget: string }
+          - { name: desc, label: "描述", widget: text }
