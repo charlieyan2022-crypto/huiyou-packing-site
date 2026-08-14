@@ -1,0 +1,222 @@
+{
+  "company": {
+    "name": "上海辉侑自动化设备有限公司",
+    "shortName": "辉侑自动化",
+    "enName": "HUIYOU AUTOMATION",
+    "slogan": "辉侑自动化，智慧行天下",
+    "subSlogan": "集研发设计、生产制造、销售于一体，为 IVD、制药、日化、食品等行业提供专业自动化生产线",
+    "description": "上海辉侑自动化设备有限公司是一家集研发设计、生产制造、销售（IVD、制药、日化、食品等行业生产线）的智能智造企业。我们不断地进行技术改造与革新、提高产品质量、扩大市场份额，逐步稳健发展。现已从单一的产品生产销售上升为向客户提供专业、系统的 IVD、制药、日化、食品等行业生产线应用技术服务。",
+    "established": "2014",
+    "headquarters": "上海",
+    "scope": "IVD、制药、日化、食品等行业生产线",
+    "vision": "以创新的科技实现人、产品、环境之间和谐共生，智慧创造美好未来",
+    "mission": "质量取胜·客户第一，以人为本，为用户提供一流的自动化生产线产品",
+    "values": [
+      { "title": "经营理念", "content": "精诚合作、科技创新；尊重人才、润泽社会" },
+      { "title": "企业精神", "content": "求真务实、高效精准、勇于创新、专业卓越" },
+      { "title": "企业愿景", "content": "以创新的科技实现人、产品、环境之间和谐共生" },
+      { "title": "企业使命", "content": "质量取胜·客户第一，以人为本" }
+    ]
+  },
+  "contact": {
+    "phone": "021-31605778",
+    "fax": "021-33275780",
+    "email": "charlie@h-ypacking.com",
+    "address": "上海市嘉定区春意路138号",
+    "icp": "沪ICP备15021659号-1"
+  },
+  "nav": [
+    { "label": "首页", "href": "#hero" },
+    { "label": "关于辉侑", "href": "#about" },
+    { "label": "行业领域", "href": "#industries" },
+    { "label": "产品中心", "href": "#products" },
+    { "label": "新闻中心", "href": "#news" },
+    { "label": "联系我们", "href": "#contact" }
+  ],
+  "heroSlides": [
+    {
+      "tag": "检验医学 / IVD 自动化灌装",
+      "title": "一次性培养基灌装生产线",
+      "desc": "预灌装培养基无菌分装，覆盖 55 / 70 / 90mm 培养皿，大幅降低分装污染风险。",
+      "image": "/assets/banners/banner1.jpg",
+      "link": "#products"
+    },
+    {
+      "tag": "制药 · 生物制剂产线",
+      "title": "生物制剂灌装生产线",
+      "desc": "高洁净环境下全流程自动化灌装、加塞、旋盖，满足高一致性生产要求。",
+      "image": "/assets/banners/banner2.jpg",
+      "link": "#products"
+    },
+    {
+      "tag": "诊断试剂灌装解决方案",
+      "title": "生化试剂灌装生产线（中速）",
+      "desc": "多规格试剂瓶精准计量灌装、旋盖、贴标一体化，保障批次一致性。",
+      "image": "/assets/banners/banner3.jpg",
+      "link": "#products"
+    },
+    {
+      "tag": "智能智造 · 自动化生产线",
+      "title": "西林瓶灌装加塞轧盖一体机",
+      "desc": "理瓶、灌装、加塞、轧盖一体化，符合制药行业洁净生产规范。",
+      "image": "/assets/banners/banner4.jpg",
+      "link": "#products"
+    }
+  ],
+  "stats": [
+    { "label": "成立年份", "value": 2014, "suffix": "" },
+    { "label": "服务行业", "value": 4, "suffix": "+" },
+    { "label": "核心产品线", "value": 7, "suffix": "+" },
+    { "label": "7×24 售后响应", "value": 1, "suffix": "" }
+  ],
+  "industries": [
+    { "id": "ivd", "name": "检验医学 / IVD", "description": "微生物检测、诊断试剂、生物制剂等自动化灌装生产线，满足临床与工业检测需求。" },
+    { "id": "pharma", "name": "制药行业", "description": "西林瓶、小溶液、培养基等药品灌装加塞轧盖一体化设备，符合 GMP 规范。" },
+    { "id": "daily", "name": "日化 / 农化", "description": "洗涤、护理、农药等日化农化产品的高速灌装旋盖解决方案。" },
+    { "id": "food", "name": "食品行业", "description": "食品饮料灌装包装生产线，提升产能与食品安全等级。" },
+    { "id": "general", "name": "其他通用设备", "description": "管类灌装旋盖一体机、洗烘灌联动线等通用自动化设备。" }
+  ],
+  "products": [
+    {
+      "id": "disposable-media-line",
+      "name": "一次性培养基灌装生产线",
+      "model": "HY-PPM04/06/08",
+      "category": "ivd",
+      "subCategory": "微生物",
+      "image": "/assets/products/disposable-media-line.png",
+      "shortDesc": "预灌装培养基灌装生产线，主要针对适用于临床微生物检测和工业微生物检测的培养基无菌分装。",
+      "fullDesc": "辉侑所生产的预灌装培养基灌装生产线主要针对适用于临床微生物检测和工业微生物检测的培养基的无菌分装。可以适用于 90mm、70mm 以及 55mm 培养皿。能够高效完成自动化分装及达到方便包装工作需求，大幅度降低了分装过程中污染的风险性。",
+      "features": ["无菌分装", "适用 55/70/90mm 培养皿", "自动化包装", "降低污染风险"],
+      "specs": [
+        { "label": "适用培养皿", "value": "55mm / 70mm / 90mm" },
+        { "label": "应用场景", "value": "临床微生物检测 / 工业微生物检测" }
+      ]
+    },
+    {
+      "id": "biochem-reagent-line",
+      "name": "生化试剂灌装生产线（中速）",
+      "model": "HY-SR02",
+      "category": "ivd",
+      "subCategory": "诊断试剂",
+      "image": "/assets/products/biochem-reagent-line.png",
+      "shortDesc": "专为诊断试剂、生化试剂设计的中速灌装生产线，兼顾效率与精度。",
+      "fullDesc": "面向诊断试剂行业的中速灌装生产线，适用于多种规格的试剂瓶，提供精准灌装、旋盖、贴标等一体化作业，确保批次一致性与洁净度。",
+      "features": ["中速稳定灌装", "多规格兼容", "精准计量", "一体化作业"],
+      "specs": [
+        { "label": "速度", "value": "中速" },
+        { "label": "适用", "value": "诊断试剂 / 生化试剂" }
+      ]
+    },
+    {
+      "id": "biologics-line",
+      "name": "生物制剂灌装生产线",
+      "model": "HY-BL05",
+      "category": "ivd",
+      "subCategory": "诊断试剂",
+      "image": "/assets/products/biologics-line.png",
+      "shortDesc": "为生物制剂、诊断试剂提供洁净环境下的自动化灌装解决方案。",
+      "fullDesc": "生物制剂灌装生产线针对高附加值生物制品，提供从理瓶、灌装、加塞到旋盖的全流程自动化，满足高洁净度与高一致性要求。",
+      "features": ["高洁净度环境", "高一致性灌装", "全流程自动化", "适合高附加值制品"],
+      "specs": [
+        { "label": "适用", "value": "生物制剂 / 诊断试剂" },
+        { "label": "环境", "value": "洁净级" }
+      ]
+    },
+    {
+      "id": "liquid-media-line",
+      "name": "液体培养基灌装生产线",
+      "model": "HY-LM03",
+      "category": "ivd",
+      "subCategory": "诊断试剂",
+      "image": "/assets/products/liquid-media-line.png",
+      "shortDesc": "液体培养基专用灌装线，实现洗瓶、烘干、灌装、旋盖等工序联动。",
+      "fullDesc": "液体培养基灌装生产线实现洗烘灌联动，适用于液体培养基、缓冲液等产品的自动化分装，提高生产效率并降低人工干预。",
+      "features": ["洗烘灌联动", "液体类产品专用", "高效率", "降低人工干预"],
+      "specs": [
+        { "label": "适用", "value": "液体培养基 / 缓冲液" },
+        { "label": "工序", "value": "洗瓶 / 烘干 / 灌装 / 旋盖" }
+      ]
+    },
+    {
+      "id": "single-tube-capper",
+      "name": "单工位管类灌装旋盖一体机",
+      "model": "HY-GX01",
+      "category": "ivd",
+      "subCategory": "诊断试剂",
+      "image": "/assets/products/single-tube-capper.png",
+      "shortDesc": "单工位管类灌装旋盖一体机，适用于试管、离心管等管类容器的灌装与封口。",
+      "fullDesc": "单工位管类灌装旋盖一体机专为管类容器设计，集自动上管、定量灌装、自动旋盖于一体，结构紧凑，操作便捷。",
+      "features": ["单工位紧凑设计", "自动上管", "定量灌装", "自动旋盖"],
+      "specs": [
+        { "label": "适用容器", "value": "试管 / 离心管 / 管类制品" },
+        { "label": "工位", "value": "单工位" }
+      ]
+    },
+    {
+      "id": "dual-tube-capper",
+      "name": "双工位管类灌装旋盖一体机",
+      "model": "HY-GX02",
+      "category": "ivd",
+      "subCategory": "诊断试剂",
+      "image": "/assets/products/dual-tube-capper.png",
+      "shortDesc": "双工位管类灌装旋盖一体机，效率翻倍，适用于大批量诊断试剂管生产。",
+      "fullDesc": "双工位管类灌装旋盖一体机在单工位基础上效率显著提升，适合大批量管类制品生产，保证灌装精度与封口稳定性。",
+      "features": ["双工位并行", "效率翻倍", "适合大批量", "精度稳定"],
+      "specs": [
+        { "label": "适用容器", "value": "试管 / 离心管 / 管类制品" },
+        { "label": "工位", "value": "双工位" }
+      ]
+    },
+    {
+      "id": "vial-filling-capper",
+      "name": "西林瓶灌装加塞轧盖一体机",
+      "model": "HY-VP06",
+      "category": "pharma",
+      "subCategory": "制药行业",
+      "image": "/assets/products/vial-filling-capper.png",
+      "shortDesc": "制药行业西林瓶专用设备，实现灌装、加塞、轧盖全流程一体化。",
+      "fullDesc": "西林瓶灌装加塞轧盖一体机适用于制药行业西林瓶制剂，集理瓶、灌装、加塞、轧盖于一体，符合制药行业洁净生产要求。",
+      "features": ["灌装 / 加塞 / 轧盖一体", "符合制药规范", "高洁净度", "稳定可靠"],
+      "specs": [
+        { "label": "适用瓶型", "value": "西林瓶" },
+        { "label": "行业", "value": "制药行业" }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "id": "29224083",
+      "title": "辉侑科技2025年春节放假通知",
+      "date": "2025-01-20",
+      "category": "公司新闻",
+      "summary": "2025年春节放假安排通知，感谢新老客户一年来的支持与信任。"
+    },
+    {
+      "id": "23905339",
+      "title": "第62届（2022年秋季）全国制药机械博览会",
+      "date": "2022-11-01",
+      "category": "行业展会",
+      "summary": "辉侑自动化亮相第62届全国制药机械博览会，展示多款灌装生产线。"
+    },
+    {
+      "id": "21823287",
+      "title": "第61届（2021年秋季）全国制药机械博览会",
+      "date": "2021-10-20",
+      "category": "行业展会",
+      "summary": "参加全国制药机械博览会，展示公司在制药与 IVD 领域的自动化装备。"
+    },
+    {
+      "id": "21772876",
+      "title": "第十二届中国（泰州）国际医药博览会",
+      "date": "2021-09-28",
+      "category": "行业展会",
+      "summary": "参加中国（泰州）国际医药博览会，拓展行业合作与交流。"
+    }
+  ],
+  "advantages": [
+    { "title": "智能智造", "desc": "研发设计、生产制造、销售服务一体化智能智造体系。" },
+    { "title": "行业定制", "desc": "面向 IVD、制药、日化、食品等行业提供专业生产线应用技术服务。" },
+    { "title": "专业技术团队", "desc": "拥有丰富经验、创新高效的专业团队，持续技术改造与革新。" },
+    { "title": "贴心售后", "desc": "7×24 客服电话响应，优质售后服务是核心保障。" }
+  ]
+}
