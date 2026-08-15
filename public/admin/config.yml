@@ -1,6 +1,10 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: charlieyan2022-crypto/huiyou-packing-site
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
 
 # 媒体文件（产品图、轮播图）上传目录
 media_folder: "public/assets/uploads"
