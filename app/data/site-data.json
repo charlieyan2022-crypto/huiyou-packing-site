@@ -12,10 +12,10 @@
     "vision": "以创新的科技实现人、产品、环境之间和谐共生，智慧创造美好未来",
     "mission": "质量取胜·客户第一，以人为本，为用户提供一流的自动化生产线产品",
     "values": [
-      { "title": "经营理念", "content": "精诚合作、科技创新；尊重人才、润泽社会" },
-      { "title": "企业精神", "content": "求真务实、高效精准、勇于创新、专业卓越" },
-      { "title": "企业愿景", "content": "以创新的科技实现人、产品、环境之间和谐共生" },
-      { "title": "企业使命", "content": "质量取胜·客户第一，以人为本" }
+      { "id": "philosophy", "title": "经营理念", "content": "精诚合作、科技创新；尊重人才、润泽社会" },
+      { "id": "spirit", "title": "企业精神", "content": "求真务实、高效精准、勇于创新、专业卓越" },
+      { "id": "vision", "title": "企业愿景", "content": "以创新的科技实现人、产品、环境之间和谐共生" },
+      { "id": "mission", "title": "企业使命", "content": "质量取胜·客户第一，以人为本" }
     ]
   },
   "contact": {
@@ -31,6 +31,7 @@
     { "label": "行业领域", "href": "#industries" },
     { "label": "产品中心", "href": "#products" },
     { "label": "新闻中心", "href": "#news" },
+    { "label": "常见问题", "href": "#faq" },
     { "label": "联系我们", "href": "#contact" }
   ],
   "heroSlides": [
@@ -64,10 +65,10 @@
     }
   ],
   "stats": [
-    { "label": "成立年份", "value": 2014, "suffix": "" },
+    { "label": "经验年限", "value": 12, "suffix": "+" },
     { "label": "服务行业", "value": 4, "suffix": "+" },
-    { "label": "核心产品线", "value": 7, "suffix": "+" },
-    { "label": "7×24 售后响应", "value": 1, "suffix": "" }
+    { "label": "核心产线", "value": 7, "suffix": "+" },
+    { "label": "全天候支持", "value": 24, "suffix": "/7" }
   ],
   "industries": [
     { "id": "ivd", "name": "检验医学 / IVD", "description": "微生物检测、诊断试剂、生物制剂等自动化灌装生产线，满足临床与工业检测需求。" },
@@ -218,5 +219,111 @@
     { "title": "行业定制", "desc": "面向 IVD、制药、日化、食品等行业提供专业生产线应用技术服务。" },
     { "title": "专业技术团队", "desc": "拥有丰富经验、创新高效的专业团队，持续技术改造与革新。" },
     { "title": "贴心售后", "desc": "7×24 客服电话响应，优质售后服务是核心保障。" }
-  ]
+  ],
+  "certifications": [
+    { "name": "CE 认证", "description": "符合欧盟机械与电气安全指令，助力设备顺利进入国际市场。" },
+    { "name": "ISO 9001", "description": "设计、生产到服务的全流程质量管理体系认证。" },
+    { "name": "GMP 级设计", "description": "按照制药洁净车间与 GMP 规范进行设备设计与制造。" },
+    { "name": "全球出口", "description": "产品出口 20+ 国家和地区，提供多语种文档与技术支持。" }
+  ],
+  "globals": {
+    "countries": "20+",
+    "since": "2016"
+  },
+  "faq": [
+    {
+      "question": "你们的灌装设备适用于哪些行业？",
+      "answer": "我们的设备适用于 IVD/诊断、制药、日化、食品饮料及通用液体包装等多个领域。"
+    },
+    {
+      "question": "是否支持定制化生产线？",
+      "answer": "支持。我们可根据您的容器类型、产能目标、计量精度与洁净度要求量身设计解决方案。"
+    },
+    {
+      "question": "交期与最小起订量如何？",
+      "answer": "标准机型交期短；定制产线按方案单独报价。最小起订量为 1 台。"
+    },
+    {
+      "question": "设备符合哪些标准？",
+      "answer": "设备按照 CE、ISO 9001 与 GMP 洁净标准设计制造，并提供完整技术文档。"
+    },
+    {
+      "question": "是否支持海外安装与培训？",
+      "answer": "支持。我们提供远程指导与现场服务，并配套英文说明书与备件清单。"
+    },
+    {
+      "question": "提供哪些售后服务？",
+      "answer": "7×24 技术支持、备件供应与终身维护建议，为每一台出厂设备保驾护航。"
+    }
+  ],
+  "ui": {
+    "productsEyebrow": "产品中心",
+    "productsTitle": "智能灌装生产线产品中心",
+    "productsSubtitle": "覆盖 IVD、制药等核心场景，提供高精度、高效率的自动化灌装解决方案。",
+    "searchPlaceholder": "搜索产品名称 / 型号...",
+    "allProducts": "全部产品",
+    "viewDetails": "查看详情",
+    "featuresLabel": "产品特点",
+    "specsLabel": "技术参数",
+    "inquireProduct": "咨询此产品",
+    "backToList": "返回列表",
+    "noProducts": "未找到相关产品",
+    "noProductsHint": "请尝试切换分类或使用其他关键词搜索。",
+    "clearFilters": "清除筛选",
+    "industriesEyebrow": "行业解决方案",
+    "industriesTitle": "多行业自动化解决方案",
+    "industriesSubtitle": "深耕 IVD、制药、日化、食品等领域，提供从单机到整线的一站式智能制造服务。",
+    "viewRelated": "查看相关产品",
+    "aboutEyebrow": "关于我们",
+    "aboutOverlay": "致力于成为中国检验医学领域星级服务供应商",
+    "establishedSuffix": "年成立于上海",
+    "establishedHint": "专注自动化生产线研发与制造",
+    "advantagesEyebrow": "选择辉侑",
+    "advantagesTitle": "选择辉侑的四大理由",
+    "newsEyebrow": "新闻中心",
+    "newsTitle": "新闻中心",
+    "newsSubtitle": "关注辉侑最新动态、行业展会与企业资讯。",
+    "viewAllNews": "查看全部新闻",
+    "readMore": "阅读详情",
+    "contactEyebrow": "联系我们",
+    "contactTitle": "联系我们",
+    "contactSubtitle": "无论您需要设备咨询、方案定制还是售后服务，辉侑团队随时为您服务。",
+    "contactInfo": "联系方式",
+    "contactInfoHint": "您可以通过以下方式直接联系到我们",
+    "contactPhone": "电话",
+    "contactEmail": "邮箱",
+    "contactAddress": "地址",
+    "contactFax": "传真",
+    "contactAfterSales": "售后",
+    "contactFormTitle": "在线留言",
+    "contactFormHint": "填写以下表单，我们将尽快与您取得联系。",
+    "yourName": "您的姓名",
+    "yourCompany": "公司名称",
+    "yourEmail": "您的邮箱",
+    "yourPhone": "您的电话",
+    "yourCountry": "国家 / 地区",
+    "productInterest": "意向产品",
+    "yourMessage": "留言内容",
+    "namePlaceholder": "请输入姓名",
+    "companyPlaceholder": "请输入公司名称",
+    "emailPlaceholder": "请输入邮箱地址",
+    "phonePlaceholder": "请输入联系电话",
+    "countryPlaceholder": "请选择国家 / 地区",
+    "messagePlaceholder": "请描述您的需求或问题",
+    "submitMessage": "提交留言",
+    "formSuccess": "留言已提交，我们会尽快与您联系！",
+    "trustEyebrow": "资质与信赖",
+    "trustTitle": "认证品质，全球信赖",
+    "trustSubtitle": "符合国际标准，产品远销全球多个国家和地区。",
+    "globalCountries": "服务国家",
+    "globalSince": "出口始于",
+    "faqEyebrow": "常见问题",
+    "faqTitle": "常见问题",
+    "faqSubtitle": "海外客户常见问题解答。",
+    "footerQuickNav": "快速导航",
+    "footerCoreProducts": "核心产品",
+    "footerContact": "联系方式",
+    "footerCopyright": "Copyright © 2014-2025 上海辉侑自动化设备有限公司 版权所有。",
+    "footerRights": "上海辉侑自动化设备有限公司"
+  }
 }

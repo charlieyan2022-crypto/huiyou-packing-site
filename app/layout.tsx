@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import siteData from "./data/site-data.json";
+import enData from "./data/site-data-en.json";
 import { ThemeProvider } from "./components/ThemeProvider";
+import { LanguageProvider } from "./i18n";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,16 +16,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: `${siteData.company.name} — ${siteData.company.slogan}`,
-  description: siteData.company.description,
+  title: `${enData.company.name} — ${enData.company.slogan}`,
+  description: enData.company.description,
   keywords: [
-    "IVD 生产线",
-    "制药灌装设备",
-    "培养基灌装生产线",
-    "诊断试剂灌装",
-    "西林瓶灌装加塞轧盖",
-    "自动化生产线",
-    "上海辉侑自动化",
+    "IVD filling line",
+    "pharmaceutical filling machine",
+    "culture media filling",
+    "diagnostic reagent filling",
+    "vial filling capping",
+    "tube filling capping",
+    "automated production line",
+    "Huiyou Automation",
   ],
 };
 
@@ -35,12 +37,14 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="zh-CN"
+      lang="en"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <LanguageProvider>{children}</LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

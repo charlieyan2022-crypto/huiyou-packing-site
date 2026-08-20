@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Phone, Mail, MapPin, Printer, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Printer, Clock, Send, Globe } from "lucide-react";
 import { Button } from "@/app/components/ui/Button";
 import { cn } from "@/app/lib/utils";
-import siteData from "@/app/data/site-data.json";
+import { useSiteData } from "@/app/i18n";
 
 function useInView<T extends HTMLElement>() {
   const ref = useRef<T>(null);
@@ -24,23 +24,47 @@ function useInView<T extends HTMLElement>() {
   return { ref, inView };
 }
 
-const contactItems = [
-  { icon: Phone, label: "电话", value: siteData.contact.phone, href: `tel:${siteData.contact.phone}` },
-  { icon: Mail, label: "邮箱", value: siteData.contact.email, href: `mailto:${siteData.contact.email}` },
-  { icon: MapPin, label: "地址", value: siteData.contact.address, href: "#" },
-  { icon: Printer, label: "传真", value: siteData.contact.fax, href: "#" },
-  { icon: Clock, label: "售后", value: "7×24 客服电话", href: "#" },
-];
-
 export function Contact() {
+  const siteData = useSiteData();
+  const ui = siteData.ui;
   const { ref, inView } = useInView<HTMLDivElement>();
-  const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    country: "",
+    product: "",
+    message: "",
+  });
   const [submitted, setSubmitted] = useState(false);
+
+  const contactItems = [
+    { icon: Phone, label: ui.contactPhone, value: siteData.contact.phone, href: `tel:${siteData.contact.phone}` },
+    { icon: Mail, label: ui.contactEmail, value: siteData.contact.email, href: `mailto:${siteData.contact.email}` },
+    { icon: MapPin, label: ui.contactAddress, value: siteData.contact.address, href: "#" },
+    { icon: Printer, label: ui.contactFax, value: siteData.contact.fax, href: "#" },
+    { icon: Clock, label: ui.contactAfterSales, value: "24/7", href: "#" },
+  ];
+
+  const update = (key: keyof typeof form, value: string) =>
+    setForm((f) => ({ ...f, [key]: value }));
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const subject = `Quote Request from ${form.name || "Website"} (${form.company || ""})`;
+    const body =
+      `Name: ${form.name}\n` +
+      `Company: ${form.company}\n` +
+      `Email: ${form.email}\n` +
+      `Phone / WhatsApp: ${form.phone}\n` +
+      `Country / Region: ${form.country}\n` +
+      `Product of Interest: ${form.product}\n\n` +
+      `Message:\n${form.message}\n`;
+    const mailto = `mailto:${siteData.contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
     setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setTimeout(() => setSubmitted(false), 4000);
   };
 
   return (
@@ -54,13 +78,13 @@ export function Contact() {
           )}
         >
           <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-            Contact Us
+            {ui.contactEyebrow}
           </span>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            联系我们
+            {ui.contactTitle}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            无论您需要设备咨询、方案定制还是售后服务，辉侑团队随时为您服务。
+            {ui.contactSubtitle}
           </p>
         </div>
 
@@ -71,8 +95,8 @@ export function Contact() {
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             )}
           >
-            <h3 className="text-xl font-semibold text-foreground">联系方式</h3>
-            <p className="mt-2 text-sm text-muted-foreground">您可以通过以下方式直接联系到我们</p>
+            <h3 className="text-xl font-semibold text-foreground">{ui.contactInfo}</h3>
+            <p className="mt-2 text-sm text-muted-foreground">{ui.contactInfoHint}</p>
             <div className="mt-8 grid gap-5">
               {contactItems.map((item) => (
                 <a
@@ -100,46 +124,80 @@ export function Contact() {
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             )}
           >
-            <h3 className="text-xl font-semibold text-foreground">在线留言</h3>
-            <p className="mt-2 text-sm text-muted-foreground">填写以下表单，我们将尽快与您取得联系。</p>
+            <h3 className="text-xl font-semibold text-foreground">{ui.contactFormTitle}</h3>
+            <p className="mt-2 text-sm text-muted-foreground">{ui.contactFormHint}</p>
             <form onSubmit={handleSubmit} className="mt-8 grid gap-5 sm:grid-cols-2">
               <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium text-foreground">您的姓名</label>
+                <label className="text-sm font-medium text-foreground">{ui.yourName}</label>
                 <input
                   required
                   value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  placeholder="请输入姓名"
+                  onChange={(e) => update("name", e.target.value)}
+                  placeholder={ui.namePlaceholder}
                   className="h-12 rounded-xl border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                 />
               </div>
               <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium text-foreground">您的电话</label>
+                <label className="text-sm font-medium text-foreground">{ui.yourCompany}</label>
                 <input
-                  required
-                  value={form.phone}
-                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  placeholder="请输入联系电话"
+                  value={form.company}
+                  onChange={(e) => update("company", e.target.value)}
+                  placeholder={ui.companyPlaceholder}
                   className="h-12 rounded-xl border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                 />
               </div>
-              <div className="flex flex-col gap-2 sm:col-span-2">
-                <label className="text-sm font-medium text-foreground">您的邮箱</label>
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-medium text-foreground">{ui.yourEmail}</label>
                 <input
                   type="email"
+                  required
                   value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  placeholder="请输入邮箱地址"
+                  onChange={(e) => update("email", e.target.value)}
+                  placeholder={ui.emailPlaceholder}
                   className="h-12 rounded-xl border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                 />
               </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-medium text-foreground">{ui.yourPhone}</label>
+                <input
+                  value={form.phone}
+                  onChange={(e) => update("phone", e.target.value)}
+                  placeholder={ui.phonePlaceholder}
+                  className="h-12 rounded-xl border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-medium text-foreground">{ui.yourCountry}</label>
+                <div className="relative">
+                  <Globe className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                  <input
+                    value={form.country}
+                    onChange={(e) => update("country", e.target.value)}
+                    placeholder={ui.countryPlaceholder}
+                    className="h-12 w-full rounded-xl border border-border bg-background pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-medium text-foreground">{ui.productInterest}</label>
+                <select
+                  value={form.product}
+                  onChange={(e) => update("product", e.target.value)}
+                  className="h-12 rounded-xl border border-border bg-background px-4 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                >
+                  <option value="">—</option>
+                  {siteData.products.map((p) => (
+                    <option key={p.id} value={p.name}>{p.name}</option>
+                  ))}
+                </select>
+              </div>
               <div className="flex flex-col gap-2 sm:col-span-2">
-                <label className="text-sm font-medium text-foreground">留言内容</label>
+                <label className="text-sm font-medium text-foreground">{ui.yourMessage}</label>
                 <textarea
                   required
                   value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  placeholder="请描述您的需求或问题"
+                  onChange={(e) => update("message", e.target.value)}
+                  placeholder={ui.messagePlaceholder}
                   rows={4}
                   className="rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                 />
@@ -147,11 +205,11 @@ export function Contact() {
               <div className="sm:col-span-2">
                 {submitted ? (
                   <div className="rounded-xl bg-green-100 px-4 py-3 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200">
-                    留言已提交，我们会尽快与您联系！
+                    {ui.formSuccess}
                   </div>
                 ) : (
                   <Button type="submit" size="lg" className="w-full sm:w-auto">
-                    提交留言
+                    {ui.submitMessage}
                     <Send className="h-4 w-4" />
                   </Button>
                 )}

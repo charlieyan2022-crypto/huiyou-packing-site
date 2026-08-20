@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { cn } from "@/app/lib/utils";
-import siteData from "@/app/data/site-data.json";
+import { useSiteData } from "@/app/i18n";
 
 function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: string }) {
   const [count, setCount] = useState(0);
@@ -32,6 +32,7 @@ function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: strin
 const AUTOPLAY_MS = 5000;
 
 export function Hero() {
+  const siteData = useSiteData();
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -83,14 +84,14 @@ export function Hero() {
 
         {/* 左右切换箭头 */}
         <button
-          aria-label="上一张"
+          aria-label="Previous"
           onClick={() => go(active - 1)}
           className="absolute left-4 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/20 text-white backdrop-blur transition hover:bg-black/40"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
         <button
-          aria-label="下一张"
+          aria-label="Next"
           onClick={() => go(active + 1)}
           className="absolute right-4 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/20 text-white backdrop-blur transition hover:bg-black/40"
         >
@@ -102,7 +103,7 @@ export function Hero() {
           {slides.map((_, i) => (
             <button
               key={i}
-              aria-label={`切换到第 ${i + 1} 组`}
+              aria-label={`Go to slide ${i + 1}`}
               onClick={() => go(i)}
               className={cn(
                 "h-2 rounded-full transition-all duration-300",

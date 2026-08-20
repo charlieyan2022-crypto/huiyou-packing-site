@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Beaker, Pill, Droplets, Apple, Settings2, ArrowUpRight } from "lucide-react";
 import { cn } from "@/app/lib/utils";
-import siteData from "@/app/data/site-data.json";
+import { useSiteData } from "@/app/i18n";
 
 const iconMap: Record<string, React.ReactNode> = {
   ivd: <Beaker className="h-7 w-7" />,
@@ -32,6 +32,8 @@ function useInView<T extends HTMLElement>() {
 }
 
 export function Industries() {
+  const siteData = useSiteData();
+  const ui = siteData.ui;
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
@@ -45,13 +47,13 @@ export function Industries() {
           )}
         >
           <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-            Industry Solutions
+            {ui.industriesEyebrow}
           </span>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            多行业自动化解决方案
+            {ui.industriesTitle}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            深耕 IVD、制药、日化、食品等领域，提供从单机到整线的一站式智能制造服务。
+            {ui.industriesSubtitle}
           </p>
         </div>
 
@@ -83,7 +85,7 @@ export function Industries() {
                 }}
                 className="relative mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
               >
-                查看相关产品
+                {ui.viewRelated}
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>

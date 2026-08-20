@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Target, Lightbulb, Users, Award } from "lucide-react";
 import { cn } from "@/app/lib/utils";
-import siteData from "@/app/data/site-data.json";
+import { useSiteData } from "@/app/i18n";
 
 function useInView<T extends HTMLElement>() {
   const ref = useRef<T>(null);
@@ -25,13 +25,15 @@ function useInView<T extends HTMLElement>() {
 }
 
 const iconMap: Record<string, React.ReactNode> = {
-  "经营理念": <Target className="h-6 w-6" />,
-  "企业精神": <Lightbulb className="h-6 w-6" />,
-  "企业愿景": <Award className="h-6 w-6" />,
-  "企业使命": <Users className="h-6 w-6" />,
+  philosophy: <Target className="h-6 w-6" />,
+  spirit: <Lightbulb className="h-6 w-6" />,
+  vision: <Award className="h-6 w-6" />,
+  mission: <Users className="h-6 w-6" />,
 };
 
 export function About() {
+  const siteData = useSiteData();
+  const ui = siteData.ui;
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
@@ -54,17 +56,17 @@ export function About() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6">
+                <div className="absolute bottom-6 left-6 right-6">
                 <div className="rounded-xl glass p-4 text-white">
                   <div className="text-xs opacity-80">HuiYou Automation</div>
-                  <div className="text-lg font-semibold">致力于成为中国检验医学领域星级服务供应商</div>
+                  <div className="text-lg font-semibold">{ui.aboutOverlay}</div>
                 </div>
               </div>
             </div>
             <div className="absolute -bottom-8 -left-8 hidden h-40 w-40 rounded-2xl border border-border bg-card p-4 shadow-xl lg:block">
               <div className="text-4xl font-bold text-primary">{siteData.company.established}</div>
-              <div className="mt-1 text-sm text-muted-foreground">年成立于上海</div>
-              <div className="mt-3 text-xs text-muted-foreground">专注自动化生产线研发与制造</div>
+              <div className="mt-1 text-sm text-muted-foreground">{ui.establishedSuffix}</div>
+              <div className="mt-3 text-xs text-muted-foreground">{ui.establishedHint}</div>
             </div>
           </div>
 
@@ -73,7 +75,7 @@ export function About() {
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           )}>
             <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-              About Us
+              {ui.aboutEyebrow}
             </span>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               {siteData.company.name}
@@ -93,7 +95,7 @@ export function About() {
                   style={{ transitionDelay: `${250 + i * 100}ms` }}
                 >
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    {iconMap[v.title]}
+                    {iconMap[v.id]}
                   </div>
                   <h3 className="mt-4 text-base font-semibold text-foreground">{v.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.content}</p>

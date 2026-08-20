@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
-import siteData from "@/app/data/site-data.json";
+import { useSiteData } from "@/app/i18n";
 
 export function Footer() {
+  const siteData = useSiteData();
+  const ui = siteData.ui;
   return (
     <footer className="border-t border-border bg-card py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -21,7 +25,7 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">快速导航</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">{ui.footerQuickNav}</h4>
             <ul className="mt-4 space-y-2">
               {siteData.nav.map((item) => (
                 <li key={item.href}>
@@ -36,7 +40,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">核心产品</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">{ui.footerCoreProducts}</h4>
             <ul className="mt-4 space-y-2">
               {siteData.products.slice(0, 5).map((p) => (
                 <li key={p.id}>
@@ -51,7 +55,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">联系方式</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-foreground">{ui.footerContact}</h4>
             <ul className="mt-4 space-y-3">
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary" />
@@ -69,7 +73,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>Copyright © 2014-2025 HuiYou Automation Co., Ltd. All rights reserved.</p>
+          <p>{ui.footerCopyright}</p>
           <p className="mt-1">{siteData.contact.icp}</p>
         </div>
       </div>

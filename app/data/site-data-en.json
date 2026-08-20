@@ -1,0 +1,329 @@
+{
+  "company": {
+    "name": "Shanghai Huiyou Automation Equipment Co., Ltd.",
+    "shortName": "HUIYOU",
+    "enName": "HUIYOU AUTOMATION",
+    "slogan": "Precision Automation. Trusted Worldwide.",
+    "subSlogan": "R&D, manufacturing and sales of automated production lines for the IVD, pharmaceutical, daily-chemical and food industries.",
+    "description": "Shanghai Huiyou Automation Equipment Co., Ltd. is a technology-driven manufacturer of intelligent automated production lines for the IVD, pharmaceutical, daily-chemical and food industries. Through continuous R&D and process innovation, we have grown from a single-product supplier into a trusted partner delivering complete, application-engineered filling, capping and packaging solutions.",
+    "established": "2014",
+    "headquarters": "Shanghai, China",
+    "scope": "IVD · Pharmaceutical · Daily-chemical · Food production lines",
+    "vision": "Creating a harmonious future through innovative technology that connects people, products and the environment.",
+    "mission": "Quality first, customer oriented — delivering world-class automated production lines.",
+    "values": [
+      { "id": "philosophy", "title": "Our Philosophy", "content": "Sincere cooperation and technology innovation; respect talent and contribute to society." },
+      { "id": "spirit", "title": "Our Spirit", "content": "Pragmatic, efficient, precise and continuously innovative." },
+      { "id": "vision", "title": "Our Vision", "content": "Harmonious coexistence of people, products and environment through innovation." },
+      { "id": "mission", "title": "Our Mission", "content": "Quality first, customer focused — world-class automation." }
+    ]
+  },
+  "contact": {
+    "phone": "+86 21 3160 5778",
+    "fax": "+86 21 3327 5780",
+    "email": "charlie@h-ypacking.com",
+    "address": "No. 138 Chunyi Road, Jiading District, Shanghai, China",
+    "icp": "沪ICP备15021659号-1"
+  },
+  "nav": [
+    { "label": "Home", "href": "#hero" },
+    { "label": "About", "href": "#about" },
+    { "label": "Industries", "href": "#industries" },
+    { "label": "Products", "href": "#products" },
+    { "label": "News", "href": "#news" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "heroSlides": [
+    {
+      "tag": "IVD / Diagnostic Media Filling",
+      "title": "Pre-filled Culture Media Filling Line",
+      "desc": "Aseptic dispensing of pre-poured media for 55/70/90 mm petri dishes, drastically reducing contamination risk.",
+      "image": "/assets/banners/banner1.jpg",
+      "link": "#products"
+    },
+    {
+      "tag": "Pharma · Biologics Line",
+      "title": "Biologics Filling Line",
+      "desc": "Fully automated filling, stoppering and capping in a high-cleanliness environment for consistent, compliant production.",
+      "image": "/assets/banners/banner2.jpg",
+      "link": "#products"
+    },
+    {
+      "tag": "Diagnostic Reagent Filling",
+      "title": "Biochemical Reagent Filling Line (Mid-speed)",
+      "desc": "Precision dosing, capping and labeling for multi-spec reagent bottles with consistent batch quality.",
+      "image": "/assets/banners/banner3.jpg",
+      "link": "#products"
+    },
+    {
+      "tag": "Smart Manufacturing",
+      "title": "Vial Filling–Stoppering–Crimping Machine",
+      "desc": "Integrated washing, filling, stoppering and crimping built to pharmaceutical cleanroom standards.",
+      "image": "/assets/banners/banner4.jpg",
+      "link": "#products"
+    }
+  ],
+  "stats": [
+    { "label": "Years of Experience", "value": 12, "suffix": "+" },
+    { "label": "Industries Served", "value": 4, "suffix": "+" },
+    { "label": "Core Product Lines", "value": 7, "suffix": "+" },
+    { "label": "Global Support", "value": 24, "suffix": "/7" }
+  ],
+  "industries": [
+    { "id": "ivd", "name": "IVD / Diagnostics", "description": "Automated filling lines for microbiology testing, diagnostic reagents and biologics — meeting clinical and industrial testing needs." },
+    { "id": "pharma", "name": "Pharmaceutical", "description": "Vial, solution and media filling–stoppering–capping systems compliant with GMP." },
+    { "id": "daily", "name": "Daily-chemical / Agro", "description": "High-speed filling and capping solutions for detergents, personal care and agrochemicals." },
+    { "id": "food", "name": "Food & Beverage", "description": "Filling and packaging lines that boost capacity and food-safety levels." },
+    { "id": "general", "name": "General Automation", "description": "Tube filling-capping units and wash-fill-cap integrated lines for general applications." }
+  ],
+  "products": [
+    {
+      "id": "disposable-media-line",
+      "name": "Pre-filled Culture Media Filling Line",
+      "model": "HY-PPM04/06/08",
+      "category": "ivd",
+      "subCategory": "Microbiology",
+      "image": "/assets/products/disposable-media-line.png",
+      "shortDesc": "Automated aseptic filling line for pre-poured culture media, ideal for clinical and industrial microbiology testing.",
+      "fullDesc": "Our pre-filled culture media filling line is designed for the aseptic dispensing of media used in clinical and industrial microbiology testing. Compatible with 90 mm, 70 mm and 55 mm petri dishes, it delivers high-speed automated dispensing and convenient packaging, significantly reducing contamination risk during filling.",
+      "features": ["Aseptic dispensing", "55/70/90 mm dish compatible", "Automated packaging", "Lower contamination risk"],
+      "specs": [
+        { "label": "Compatible dishes", "value": "55 mm / 70 mm / 90 mm" },
+        { "label": "Applications", "value": "Clinical & industrial microbiology" }
+      ]
+    },
+    {
+      "id": "biochem-reagent-line",
+      "name": "Biochemical Reagent Filling Line (Mid-speed)",
+      "model": "HY-SR02",
+      "category": "ivd",
+      "subCategory": "Diagnostic Reagent",
+      "image": "/assets/products/biochem-reagent-line.png",
+      "shortDesc": "Mid-speed filling line engineered for diagnostic and biochemical reagents, balancing speed and precision.",
+      "fullDesc": "A mid-speed filling line for the diagnostic reagent industry, suitable for various reagent bottle sizes. It provides precise filling, capping and labeling in one integrated process, ensuring batch consistency and cleanliness.",
+      "features": ["Stable mid-speed filling", "Multi-format compatibility", "Accurate dosing", "Integrated process"],
+      "specs": [
+        { "label": "Speed", "value": "Mid-speed" },
+        { "label": "Suitable for", "value": "Diagnostic / biochemical reagents" }
+      ]
+    },
+    {
+      "id": "biologics-line",
+      "name": "Biologics Filling Line",
+      "model": "HY-BL05",
+      "category": "ivd",
+      "subCategory": "Diagnostic Reagent",
+      "image": "/assets/products/biologics-line.png",
+      "shortDesc": "Automated filling solution for biologics and diagnostic reagents in a high-cleanliness environment.",
+      "fullDesc": "Engineered for high-value biologics, this line delivers fully automated bottle feeding, filling, stoppering and capping, meeting the highest requirements for cleanliness and consistency.",
+      "features": ["High-cleanliness environment", "High-consistency filling", "Fully automated", "For high-value products"],
+      "specs": [
+        { "label": "Suitable for", "value": "Biologics / diagnostic reagents" },
+        { "label": "Environment", "value": "Cleanroom grade" }
+      ]
+    },
+    {
+      "id": "liquid-media-line",
+      "name": "Liquid Culture Media Filling Line",
+      "model": "HY-LM03",
+      "category": "ivd",
+      "subCategory": "Diagnostic Reagent",
+      "image": "/assets/products/liquid-media-line.png",
+      "shortDesc": "Dedicated liquid-media line integrating washing, drying and filling for higher efficiency.",
+      "fullDesc": "Integrates bottle washing, drying and filling into a continuous line for liquid media and buffer solutions, improving productivity while reducing manual intervention.",
+      "features": ["Wash–dry–fill integration", "For liquid products", "High efficiency", "Less manual labor"],
+      "specs": [
+        { "label": "Suitable for", "value": "Liquid media / buffer" },
+        { "label": "Process", "value": "Wash / dry / fill / cap" }
+      ]
+    },
+    {
+      "id": "single-tube-capper",
+      "name": "Single-station Tube Filling & Capping Machine",
+      "model": "HY-GX01",
+      "category": "ivd",
+      "subCategory": "Diagnostic Reagent",
+      "image": "/assets/products/single-tube-capper.png",
+      "shortDesc": "Compact single-station unit for filling and sealing tubes, vials and centrifuge containers.",
+      "fullDesc": "A compact single-station tube filling and capping machine designed for tubular containers. It integrates automatic tube feeding, quantitative filling and capping in one space-saving, easy-to-operate unit.",
+      "features": ["Compact single station", "Auto tube feeding", "Quantitative filling", "Auto capping"],
+      "specs": [
+        { "label": "Containers", "value": "Tubes / centrifuge tubes" },
+        { "label": "Stations", "value": "Single" }
+      ]
+    },
+    {
+      "id": "dual-tube-capper",
+      "name": "Dual-station Tube Filling & Capping Machine",
+      "model": "HY-GX02",
+      "category": "ivd",
+      "subCategory": "Diagnostic Reagent",
+      "image": "/assets/products/dual-tube-capper.png",
+      "shortDesc": "Dual-station capper that doubles throughput for high-volume reagent tube production.",
+      "fullDesc": "Building on the single-station design, the dual-station unit roughly doubles output, ideal for high-volume tubular product manufacturing with stable filling accuracy and seal integrity.",
+      "features": ["Dual parallel stations", "Doubled output", "High-volume ready", "Stable accuracy"],
+      "specs": [
+        { "label": "Containers", "value": "Tubes / centrifuge tubes" },
+        { "label": "Stations", "value": "Dual" }
+      ]
+    },
+    {
+      "id": "vial-filling-capper",
+      "name": "Vial Filling–Stoppering–Crimping Machine",
+      "model": "HY-VP06",
+      "category": "pharma",
+      "subCategory": "Pharmaceutical",
+      "image": "/assets/products/vial-filling-capper.png",
+      "shortDesc": "Pharmaceutical vial system integrating filling, stoppering and crimping to GMP standards.",
+      "fullDesc": "Purpose-built for pharmaceutical vials, this machine integrates bottle feeding, filling, stoppering and crimping in one line, complying with pharmaceutical cleanroom production requirements.",
+      "features": ["Fill / stopper / crimp integrated", "GMP compliant", "High cleanliness", "Reliable & stable"],
+      "specs": [
+        { "label": "Vessel", "value": "Vials" },
+        { "label": "Industry", "value": "Pharmaceutical" }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "id": "29224083",
+      "title": "Huiyou 2025 Spring Festival Holiday Notice",
+      "date": "2025-01-20",
+      "category": "Company News",
+      "summary": "Holiday arrangement for Spring Festival 2025. Thank you for your support and trust over the past year."
+    },
+    {
+      "id": "23905339",
+      "title": "The 62nd (Autumn 2022) National Pharmaceutical Machinery Expo",
+      "date": "2022-11-01",
+      "category": "Trade Show",
+      "summary": "Huiyou showcased multiple filling production lines at the 62nd National Pharmaceutical Machinery Expo."
+    },
+    {
+      "id": "21823287",
+      "title": "The 61st (Autumn 2021) National Pharmaceutical Machinery Expo",
+      "date": "2021-10-20",
+      "category": "Trade Show",
+      "summary": "Participated in the expo, presenting automation equipment for pharmaceutical and IVD sectors."
+    },
+    {
+      "id": "21772876",
+      "title": "The 12th China (Taizhou) International Medical Expo",
+      "date": "2021-09-28",
+      "category": "Trade Show",
+      "summary": "Joined the Taizhou International Medical Expo to expand industry cooperation."
+    }
+  ],
+  "advantages": [
+    { "title": "Smart Manufacturing", "desc": "Integrated R&D, manufacturing and service system for automated production lines." },
+    { "title": "Industry Customization", "desc": "Application-engineered lines for IVD, pharmaceutical, daily-chemical and food." },
+    { "title": "Expert Team", "desc": "An experienced, innovative team driving continuous improvement." },
+    { "title": "Responsive Support", "desc": "24/7 phone support — service you can rely on." }
+  ],
+  "certifications": [
+    { "name": "CE Certified", "description": "Compliant with EU machinery & electrical safety directives for smooth market access." },
+    { "name": "ISO 9001", "description": "Certified quality management across design, production and service." },
+    { "name": "GMP-grade Design", "description": "Engineered to pharmaceutical cleanroom and GMP requirements." },
+    { "name": "Global Export", "description": "Shipped to 20+ countries with multilingual documentation and support." }
+  ],
+  "globals": {
+    "countries": "20+",
+    "since": "2016"
+  },
+  "faq": [
+    {
+      "question": "What industries do your filling machines serve?",
+      "answer": "Our equipment serves IVD/diagnostics, pharmaceutical, daily-chemical, food & beverage and general liquid-packaging applications."
+    },
+    {
+      "question": "Do you provide customized production lines?",
+      "answer": "Yes. We engineer solutions around your container type, target speed, dosing accuracy and cleanroom requirements."
+    },
+    {
+      "question": "What are your lead times and minimum order quantity?",
+      "answer": "Standard models are available with short lead times; customized lines are quoted case by case. MOQ is 1 unit."
+    },
+    {
+      "question": "Which standards do your machines meet?",
+      "answer": "Equipment is built to CE, ISO 9001 and GMP cleanroom standards, with full documentation provided."
+    },
+    {
+      "question": "Do you support overseas installation and training?",
+      "answer": "Yes — we provide remote guidance and on-site service, plus English manuals and a recommended spare-parts list."
+    },
+    {
+      "question": "What after-sales support do you provide?",
+      "answer": "24/7 technical support, spare-parts supply and lifetime maintenance advice back every machine we ship."
+    }
+  ],
+  "ui": {
+    "productsEyebrow": "Products",
+    "productsTitle": "Intelligent Filling Production Lines",
+    "productsSubtitle": "Covering IVD, pharmaceutical and beyond — high-precision, high-efficiency automated filling solutions.",
+    "searchPlaceholder": "Search by name or model...",
+    "allProducts": "All Products",
+    "viewDetails": "View Details",
+    "featuresLabel": "Key Features",
+    "specsLabel": "Technical Specs",
+    "inquireProduct": "Inquire About This Product",
+    "backToList": "Back to List",
+    "noProducts": "No matching products",
+    "noProductsHint": "Try a different category or keyword.",
+    "clearFilters": "Clear Filters",
+    "industriesEyebrow": "Industry Solutions",
+    "industriesTitle": "Multi-industry Automation Solutions",
+    "industriesSubtitle": "Deep expertise across IVD, pharmaceutical, daily-chemical and food — from standalone machines to complete lines.",
+    "viewRelated": "View Related Products",
+    "aboutEyebrow": "About Us",
+    "aboutOverlay": "Your trusted partner in diagnostic & pharmaceutical automation",
+    "establishedSuffix": "Established in Shanghai",
+    "establishedHint": "Focused on automated production-line R&D & manufacturing",
+    "advantagesEyebrow": "Why HuiYou",
+    "advantagesTitle": "Four Reasons to Choose HuiYou",
+    "newsEyebrow": "News & Events",
+    "newsTitle": "News Center",
+    "newsSubtitle": "Stay updated with Huiyou's latest news, trade shows and company updates.",
+    "viewAllNews": "View All News",
+    "readMore": "Read More",
+    "contactEyebrow": "Get in Touch",
+    "contactTitle": "Contact Us",
+    "contactSubtitle": "Whether you need equipment consultation, a custom solution or after-sales support, the Huiyou team is ready to help.",
+    "contactInfo": "Contact Information",
+    "contactInfoHint": "Reach us directly through any of the following channels.",
+    "contactPhone": "Phone",
+    "contactEmail": "Email",
+    "contactAddress": "Address",
+    "contactFax": "Fax",
+    "contactAfterSales": "Support",
+    "contactFormTitle": "Request a Quote",
+    "contactFormHint": "Tell us about your project and we'll respond within 1 business day.",
+    "yourName": "Full Name",
+    "yourCompany": "Company",
+    "yourEmail": "Email",
+    "yourPhone": "Phone / WhatsApp",
+    "yourCountry": "Country / Region",
+    "productInterest": "Product of Interest",
+    "yourMessage": "Your Message",
+    "namePlaceholder": "e.g. John Smith",
+    "companyPlaceholder": "e.g. ABC Diagnostics Ltd.",
+    "emailPlaceholder": "e.g. john@company.com",
+    "phonePlaceholder": "e.g. +1 234 567 8900",
+    "countryPlaceholder": "Select your country",
+    "messagePlaceholder": "Describe your filling application, container type, speed, etc.",
+    "submitMessage": "Send Inquiry",
+    "formSuccess": "Thank you! Your inquiry has been sent. We'll get back to you shortly.",
+    "trustEyebrow": "Trust & Quality",
+    "trustTitle": "Certified Quality, Global Reach",
+    "trustSubtitle": "Built to international standards and shipped to customers worldwide.",
+    "globalCountries": "Countries Served",
+    "globalSince": "Exporting Since",
+    "faqEyebrow": "FAQ",
+    "faqTitle": "Frequently Asked Questions",
+    "faqSubtitle": "Answers to common questions from international buyers.",
+    "footerQuickNav": "Quick Links",
+    "footerCoreProducts": "Core Products",
+    "footerContact": "Contact",
+    "footerCopyright": "Copyright © 2014–2026 Huiyou Automation Equipment Co., Ltd. All rights reserved.",
+    "footerRights": "Shanghai Huiyou Automation Equipment Co., Ltd."
+  }
+}

@@ -5,7 +5,7 @@ import { Calendar, ArrowRight, Newspaper } from "lucide-react";
 import { Button } from "@/app/components/ui/Button";
 import { Badge } from "@/app/components/ui/Badge";
 import { cn } from "@/app/lib/utils";
-import siteData from "@/app/data/site-data.json";
+import { useSiteData } from "@/app/i18n";
 
 function useInView<T extends HTMLElement>() {
   const ref = useRef<T>(null);
@@ -26,6 +26,8 @@ function useInView<T extends HTMLElement>() {
 }
 
 export function News() {
+  const siteData = useSiteData();
+  const ui = siteData.ui;
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
@@ -40,17 +42,17 @@ export function News() {
         >
           <div>
             <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-              News Center
+              {ui.newsEyebrow}
             </span>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              新闻中心
+              {ui.newsTitle}
             </h2>
             <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
-              关注辉侑最新动态、行业展会与企业资讯。
+              {ui.newsSubtitle}
             </p>
           </div>
           <Button variant="outline" size="sm" className="hidden sm:inline-flex">
-            查看全部新闻
+            {ui.viewAllNews}
             <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
@@ -87,7 +89,7 @@ export function News() {
                   onClick={(e) => e.preventDefault()}
                   className="mt-3 inline-flex items-center gap-1 self-start text-sm font-medium text-primary hover:underline"
                 >
-                  阅读详情
+                  {ui.readMore}
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </a>
               </div>
@@ -97,7 +99,7 @@ export function News() {
 
         <div className="mt-10 flex justify-center sm:hidden">
           <Button variant="outline" size="sm">
-            查看全部新闻
+            {ui.viewAllNews}
             <ArrowRight className="h-4 w-4" />
           </Button>
         </div>

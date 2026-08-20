@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Cpu, Wrench, Headphones, ShieldCheck } from "lucide-react";
 import { cn } from "@/app/lib/utils";
-import siteData from "@/app/data/site-data.json";
+import { useSiteData } from "@/app/i18n";
 
 function useInView<T extends HTMLElement>() {
   const ref = useRef<T>(null);
@@ -26,6 +26,8 @@ function useInView<T extends HTMLElement>() {
 const icons = [Cpu, Wrench, Headphones, ShieldCheck];
 
 export function Advantages() {
+  const siteData = useSiteData();
+  const ui = siteData.ui;
   const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
@@ -41,10 +43,10 @@ export function Advantages() {
           )}
         >
           <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-            Why HuiYou
+            {ui.advantagesEyebrow}
           </span>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            选择辉侑的四大理由
+            {ui.advantagesTitle}
           </h2>
         </div>
 

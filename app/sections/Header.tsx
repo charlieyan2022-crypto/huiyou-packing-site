@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Menu, X, Moon, Sun, Phone } from "lucide-react";
+import { Menu, X, Moon, Sun, Phone, Languages } from "lucide-react";
 import { useTheme } from "@/app/components/ThemeProvider";
+import { useSiteData, useLanguage } from "@/app/i18n";
 import { cn } from "@/app/lib/utils";
-import siteData from "@/app/data/site-data.json";
 
 export function Header() {
   const { theme, toggleTheme } = useTheme();
+  const siteData = useSiteData();
+  const { lang, toggleLang } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [active, setActive] = useState("#hero");
@@ -102,6 +104,14 @@ export function Header() {
             {siteData.contact.phone}
           </a>
           <button
+            onClick={toggleLang}
+            className="inline-flex h-10 items-center gap-1.5 rounded-full border border-border px-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+            aria-label="切换语言"
+          >
+            <Languages className="h-4 w-4" />
+            {lang === "zh" ? "EN" : "中"}
+          </button>
+          <button
             onClick={toggleTheme}
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground hover:bg-muted transition-colors"
             aria-label="切换主题"
@@ -111,6 +121,14 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
+          <button
+            onClick={toggleLang}
+            className="inline-flex h-10 items-center gap-1.5 rounded-full border border-border px-3 text-sm font-medium text-foreground hover:bg-muted transition-colors"
+            aria-label="切换语言"
+          >
+            <Languages className="h-4 w-4" />
+            {lang === "zh" ? "EN" : "中"}
+          </button>
           <button
             onClick={toggleTheme}
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground hover:bg-muted transition-colors"
